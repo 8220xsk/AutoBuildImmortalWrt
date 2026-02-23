@@ -5,7 +5,7 @@ source shell/custom-packages.sh
 # === 新增：强制更换软件源与关闭签名校验 ===
 echo "🔧 正在优化软件源配置..."
 # 1. 替换为腾讯云镜像源 (GitHub Actions 环境访问非常稳定)
-sed -i 's/downloads.immortalwrt.org/mirrors.vsean.net\/immortalwrt/g' /home/build/immortalwrt/repositories.conf
+sed -i 's/downloads.immortalwrt.org/mirrors.ustc.edu.cn\/immortalwrt/g' /home/build/immortalwrt/repositories.conf
 # 2. 关闭签名校验，防止 wget returned 8 错误
 sed -i 's/option check_signature/# option check_signature/g' /home/build/immortalwrt/repositories.conf
 echo "✅ 软件源已指向腾讯云并跳过签名校验"
